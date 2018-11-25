@@ -1,0 +1,64 @@
+.container {
+  background: #393232;
+  font-size: 32rpx;
+}
+.history-container {
+  background: #393232;
+  padding: 20rpx 10rpx;
+}
+
+.section {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+.section .count {
+  border: 1px solid #4d4545;
+  padding: 10rpx;
+}
+.section .active {
+  border: 1px solid #ed8d8d;
+  color: #ed8d8d;
+}
+
+.wrapper {
+  padding: 10rpx;
+}
+.wrapper .num {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #c0c0c0;
+  padding: 10rpx;
+}
+.wrapper .date {
+  font-size: 28rpx;
+  color: #c0c0c0;
+  margin-left: 20rpx;
+}
+
+.ball-wrapper {
+  padding: 10rpx 0;
+}
+.ball-num {
+  margin-right: 10rpx;
+}
+.right image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.detail {
+  font-size: 26rpx;
+  padding-top: 10rpx;
+  background: #4d4545;
+}
+.detail .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+
+.detail .total .sales, .detail .total .poolmoney {
+  color: #FF3366;
+}

@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tab-container">
+    <view class="ball {{tabIndex == 0 ? 'active' : ''}}" data-index="0" bindtap="changeTab">双色球</view>
+    <view class="choose {{tabIndex == 1 ? 'active' : ''}}" data-index="1" bindtap="changeTab">去选号</view>
+  </view>
+  <view class="left" hidden="{{tabIndex != 0}}">
+    <view class="lucky-wrappe">
+      <text class="lucky-date">第{{code}}期开奖号码({{date}})</text>
+      <view class="lucky-num">
+        <view>
+          <text class="ball-num" wx:for="{{red}}" wx:key="{{index}}">{{item}}</text>
+          <text class="ball-num ball-blue">{{blue}}</text>
+        </view>
+        <view class="show-detail">
+          <image src="{{img}}" bindtap="goHistory"></image>
+        </view>
+      </view>
+      <view class="lucky-descr">
+        <navigator url='../descr/descr'>中奖说明?</navigator>
+        <text>下期{{nextData}} 21:15开奖</text>
+      </view>
+    </view>
+    <view class="money-wrappe">
+      <text>本期销量：<text class="sales">{{sales}}</text>元</text>
+      <text>奖池滚动：<text class="poolmoney">{{poolmoney}}</text>元</text>
+    </view>
+    <detail prizeGrades="{{prizeGrades}}"></detail>
+    <view class="data-from">
+      <text>数据来源：中国福利彩票官网 http://www.cwl.gov.cn</text>
+    </view>
+  </view>
+  <view class="right choose-wrapper" hidden="{{tabIndex != 1}}">
+    <view class="choose-title">
+      <text class="red-text">红球区</text>
+      <text>至少选择6个红球</text>
+    </view>
+    <view class="choose-red">
+      <view class="red-wrapper" wx:for="{{redArray}}" wx:key="{{index}}">
+        <view class="red-item ball-num {{redChooseMap[item] === undefined ? '' : 'red'}}" data-num="{{item}}" bindtap="chooseRed">{{item}}</view>
+      </view>
+    </view>
+    <view class="choose-title">
+      <text class="blue-text">蓝球区</text>
+      <text>至少选择1个蓝球</text>
+    </view>
+    <view class="choose-blue">
+      <view class="blue-wrapper" wx:for="{{blueArray}}" wx:key="{{index}}">
+        <view class="blue-item ball-num ball-blue {{blueChooseMap[item] === undefined ? '' : 'blue'}}" data-num="{{item}}" bindtap="chooseBlue">{{item}}</view>
+      </view>
+    </view>
+    <view class="choose-operate">
+      <button size="mini" type="primary" bindtap="confirm">{{editIndex === -1 ? '确认选号' : '确认修改'}}</button>
+      <button size="mini" type="warn" bindtap="clear">清空</button>
+      <picker mode="multiSelector" value="{{multiIndex}}" bindchange="randomChoosePicker" range="{{multiArray}}" class="picker-many">
+        <button size="mini" type="warn">听天由命</button>
+      </picker>
+      <!-- <button size="mini" type="primary" open-type="contact">发送到微信</button> -->
+    </view>
+    <scroll-view class="scroll-wrapper" scroll-y>
+      <view class="choose-result">
+        <scroll-view class="choose-scroll {{index === choosedIndex ? 'choosed' : ''}}" scroll-x wx:for="{{allChoose}}" wx:key="{{index}}" data-index="{{index}}" bindlongpress="longPress">
+          <view class="result-wrappe">
+            <view class="ball-num red" wx:for="{{item.red}}" wx:key="{{index}}">{{item}}</view>
+            <view class="ball-num blue" wx:for="{{item.blue}}" wx:key="{{index}}">{{item}}</view>
+          </view>
+        </scroll-view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

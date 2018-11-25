@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "开奖历史",
+  "usingComponents": {
+    "detail": "../../components/detail/detail"
+  }
+}

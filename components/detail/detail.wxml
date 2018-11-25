@@ -1,0 +1,12 @@
+<view class="detail-wrappe">
+  <view class="table">
+    <view class="tr">
+      <view class="th" wx:for="{{title}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="tr" wx:for="{{prizeGrades}}" wx:key="{{index}}">
+      <view class="td">{{typeMap[item.type]}}</view>
+      <view class="td">{{item.typenum}}</view>
+      <view class="td">{{item.typemoney}}</view>
+    </view>
+  </view>
+</view>

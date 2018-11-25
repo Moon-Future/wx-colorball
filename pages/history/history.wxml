@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="history-container">
+    <view class="section">
+      <view class="count {{index == countIndex ? 'active' : ''}}" data-index="{{index}}" data-count="{{item}}" bindtap="search" wx:for="{{countSection}}" wx:key="{{index}}">
+        近{{item}}期
+      </view>
+      <picker class="time-section" mode="date">
+        <view class="count">自定义查询</view>
+      </picker>
+      <view class="count">走势图</view>
+    </view>
+    <view class="wrapper" wx:for="{{history}}" wx:key="{{index}}" data-index="{{index}}" bindtap="showDetail">
+      <view class="num">
+        <view class="left">
+          <view class="time">
+            <text class="code">第{{item.code}}期</text>
+            <text class="date">{{item.date}}</text>
+          </view>
+          <view class="ball-wrapper">
+            <text class="ball-num" wx:for="{{item.red}}" wx:key="{{index}}">{{item}}</text>
+            <text class="ball-num ball-blue">{{item.blue}}</text>
+          </view>
+        </view>
+        <view class="right">
+          <image src="{{index == currentIndex ? '../../img/down.png' : '../../img/right.png'}}"></image>
+        </view>
+      </view>
+      <view class="detail" hidden="{{index != currentIndex}}">
+        <view class="total">
+          <view>
+            本期销量：<text class="sales">{{item.sales}}</text>元
+          </view>
+          <view>
+            奖池滚存：<text class="poolmoney">{{item.poolmoney}}</text>元
+          </view>
+        </view>
+        <detail prizeGrades="{{item.prizegrades}}"></detail>
+      </view>
+    </view>
+  </view>
+</view>

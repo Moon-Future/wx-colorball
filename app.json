@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/descr/descr",
+    "pages/history/history",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4d4545",
+    "backgroundColor": "#000000",
+    "navigationBarTitleText": "福利彩票",
+    "navigationBarTextStyle":"white"
+  }
+}

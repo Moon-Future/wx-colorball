@@ -1,0 +1,130 @@
+/**index.wxss**/
+.container {
+  text-align: center;
+  padding: 0 20rpx;
+  font-size: 26rpx;
+}
+.tab-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 36rpx;
+}
+.tab-container view {
+  padding: 20rpx 60rpx;
+}
+.tab-container view.active {
+  border-bottom: 4rpx solid #FF3366;
+}
+
+.lucky-wrappe {
+  background: #4d4545;
+  padding: 10rpx;
+}
+.lucky-wrappe .lucky-num {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.lucky-descr, .money-wrappe {
+  display: flex;
+  justify-content: space-between;
+}
+.show-detail {
+  position: absolute;
+  right: 20rpx;
+}
+.show-detail image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.money-wrappe {
+  padding: 10rpx;
+}
+.money-wrappe .sales, .money-wrappe .poolmoney {
+  color: #FF3366;
+}
+.data-from {
+  padding: 20rpx;
+}
+
+.choose-wrapper {
+  display: flex;
+  flex-flow: column;
+  margin-top: 20rpx;
+}
+.choose-red, .choose-blue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.choose-wrapper .ball-num {
+  margin-bottom: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #c0c0c0;
+  color: #000;
+}
+.choose-wrapper .red {
+  background: #FF3366;
+  color: #fff;
+}
+.choose-wrapper .blue {
+  background: #0099FF;
+  color: #fff;
+}
+.red-wrapper {
+  width: 9%;
+}
+.blue-wrapper {
+  width: 12%;
+}
+
+.choose-title {
+  text-align: left;
+  margin-bottom: 10rpx;
+}
+.red-text {
+  color: #FF3366;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+.blue-text {
+  color: #0099FF;
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.choose-operate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picker-many {
+  line-height: 0;
+}
+
+.scroll-wrapper {
+  margin-top: 20rpx;
+  max-height: 500rpx;
+}
+.choose-result {
+  background: #4d4545;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+.choose-result .choose-scroll {
+  padding: 0 10rpx;
+}
+.choose-result .choosed {
+  background: #ed8d8d;
+}
+.result-wrappe .ball-num {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}

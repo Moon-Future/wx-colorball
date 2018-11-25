@@ -1,0 +1,54 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom , #000000, #000000 40%, #FF3366);
+  color: #fff;
+} 
+
+.ball-num {
+  background: #FF3366;
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  text-align: center;
+}
+.ball-blue {
+  background: #0099FF;
+}
+
+.table .tr {
+  display: flex;
+}
+.th, .td {
+  width: 100%;
+  text-align: center;
+  padding: 10rpx 0;
+  border-right: 1rpx solid #666;
+  border-bottom: 1rpx solid #666;
+}
+.th:first-child, .td:first-child {
+  border-left: 1rpx solid #666;
+}
+.table .tr:first-child .th {
+  border-top: 1rpx solid #666;
+  font-weight: bold;
+}

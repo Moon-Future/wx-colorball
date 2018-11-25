@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="descr-image">
+    <image src="../../img/prize.png"></image>
+  </view>
+  <view class="descr-container">
+    <view class="descr-text">
+      <text>开奖时间：每周二、四、日 21:15 开奖</text>
+      <text>玩法规则：6个红球+1个篮球=1注（2元）</text>
+    </view>
+    <view class="table">
+      <view class="tr">
+        <view class="th">奖等</view>
+        <view class="th">奖金</view>
+        <view class="th">中奖条件</view>
+      </view>
+      <view class="tr" wx:for="{{tableData}}" wx:key="{{index}}">
+        <view class="td">{{item.rank}}</view>
+        <view class="td">{{item.money}}</view>
+        <view class="td td-ball">
+          <view class="ball-list" wx:for="{{item.condition}}" wx:for-item="ballList" wx:key="{{index}}">
+            <view wx:for="{{ballList}}" wx:key="{{index}}">
+              <view class="ball {{item == '1' ? 'ball-red' : item == '2' ? 'ball-blue' : ''}}"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="state">
+      <text>奖金说明：单注最高奖金1000万</text>
+    </view>
+  </view>
+</view>

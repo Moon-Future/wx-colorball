@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tab-img">
+    <image src="../../img/bar.png" data-type="bar" bindtap="changeType"></image>
+    <image src="../../img/line.png" data-type="line" bindtap="changeType"></image>
+  </view>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>

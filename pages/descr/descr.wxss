@@ -1,0 +1,68 @@
+.descr-image {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+.descr-image image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.descr-container {
+  background: #4d4545;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 100rpx;
+  bottom: 10rpx;
+  right: 10rpx;
+  left: 10rpx;
+  padding-top: 80rpx;
+  font-size: 26rpx;
+}
+.descr-text {
+  font-size: 22rpx;
+}
+.descr-text text {
+  display: block;
+}
+
+.table {
+  margin-top: 20rpx;
+}
+.table .td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.td-ball {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.ball-list {
+  display: flex;
+  justify-content: center;
+}
+.ball {
+  width: 25rpx;
+  height: 25rpx;
+  background: #c0c0c0;
+  border-radius: 50%;
+  margin: 10rpx 5rpx 10rpx 0
+}
+.ball-red {
+  background: #FF3366;
+}
+.ball-blue {
+  background: #0099FF;
+}
+
+.state {
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+}
